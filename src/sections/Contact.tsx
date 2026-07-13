@@ -26,7 +26,7 @@ export function Contact() {
     try {
       const res = await saveMessage(values) as any;
       if (res && res._localFallback) {
-        push('Message saved locally — set Supabase env vars to persist to DB.', 'warning');
+        push('Message saved locally — set Supabase env vars to persist to DB.', 'info');
       } else {
         push('Message sent. Yash will see it in the admin dashboard.', 'success');
       }
